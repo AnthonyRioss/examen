@@ -57,6 +57,8 @@ http://18.222.240.6:5000/recommend
 
 ![alt text](image-1.png)
 
+![alt text](image-3.png)
+
 ## Requisitos
 
 El proyecto requiere las siguientes librerías de Python:
