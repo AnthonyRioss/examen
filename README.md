@@ -70,7 +70,7 @@ El proyecto requiere las siguientes librerías de Python:
 Todas las dependencias están listadas en el archivo `requirements.txt` y pueden instalarse con el siguiente comando:
 ```bash
 pip install -r requirements.txt
-
+```
 ## Observaciones
 Por temas de tiempo estoy probando la funcionalidad de servicios como vertex IA 
 
