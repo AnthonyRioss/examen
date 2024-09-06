@@ -1,1 +1,67 @@
-# examen
+# Sistema de Recomendación de Películas
+
+Este repositorio contiene la implementación de un sistema de recomendación de películas utilizando filtrado colaborativo. El sistema está basado en el dataset **MovieLens** y fue desarrollado utilizando Python, con un enfoque en el filtrado colaborativo basado en interacciones entre usuarios y películas. El modelo se construyó usando la librería `surprise`, y el sistema fue desplegado en **AWS EC2** con una API construida en **Flask**.
+
+## Estructura del Proyecto
+- **Exploración y Preparación de Datos:**
+    - Se exploró y limpió el dataset proporcionado por MovieLens. El dataset incluye las calificaciones que los usuarios dieron a una amplia variedad de películas.
+    - Se realizó un análisis exploratorio de datos (EDA) en un cuaderno de Jupyter alojado en Google Colab.
+    - Se manejaron valores faltantes y se prepararon los datos para el modelado.
+
+- **Implementación del Modelo:**
+    - Se implementó un modelo de filtrado colaborativo utilizando **K-Nearest Neighbors (KNN)** con la librería `surprise`.
+    - El modelo fue entrenado con el dataset **MovieLens 1M** para sugerir las 10 mejores películas a un usuario dado, basándose en sus calificaciones anteriores.
+
+- **Despliegue:**
+    - El sistema de recomendación fue desplegado como una **API REST** utilizando Flask.
+    - La API recibe un `user_id` como entrada y devuelve las 10 mejores recomendaciones de películas para ese usuario.
+
+## Uso
+
+### Ejecutar Localmente
+Para ejecutar el sistema localmente, sigue estos pasos:
+
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/AnthonyRioss/examen.git
+    ```
+
+2. Instala las dependencias necesarias:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Ejecuta la aplicación Flask:
+    ```bash
+    python app.py
+    ```
+
+4. Accede a la API a través de `http://127.0.0.1:5000/recommend?user_id=<id>`.
+
+### Cuaderno de Google Colab
+El entrenamiento del modelo y el análisis exploratorio de datos (EDA) se realizaron en **Google Colab**. El cuaderno se encuentra en este repositorio con el archivo `Modelo_de_recomendacion.ipynb`. Puedes abrir este cuaderno en Colab para ver el proceso detallado de exploración de datos, preprocesamiento y entrenamiento del modelo.
+
+### Despliegue en AWS
+
+Se Añadió el modelo a un bucket en AWS debido al tamaño del modelo, al ser mayor 200 github no acepta ese tamaño.
+![alt text](image.png)
+
+El sistema fue desplegado en una instancia de **AWS EC2**. Para acceder a la API de recomendaciones, puedes hacer una solicitud GET a:
+
+http://18.118.132.165:5000/
+
+![alt text](image-1.png)
+
+## Requisitos
+
+El proyecto requiere las siguientes librerías de Python:
+- `Flask>=2.0`
+- `numpy>=1.22.4`
+- `pandas>=1.3.0`
+- `scikit-surprise>=1.1.1`
+- `joblib>=1.0.0`
+- `scipy>=1.6.0`
+
+Todas las dependencias están listadas en el archivo `requirements.txt` y pueden instalarse con el siguiente comando:
+```bash
+pip install -r requirements.txt
