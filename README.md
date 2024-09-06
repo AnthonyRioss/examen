@@ -53,7 +53,7 @@ Se Añadió el modelo a un bucket en AWS debido al tamaño del modelo, al ser ma
  
 El sistema fue desplegado en una instancia de **AWS EC2**. Para acceder a la API de recomendaciones, puedes hacer una solicitud GET a:
 
-http://18.222.240.6:5000/
+http://18.222.240.6:5000/recommend
 
 ![alt text](image-1.png)
 
