@@ -1,5 +1,5 @@
 import pandas as pd
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import joblib
 
 # Cargar los datos de calificaciones y películas con manejo de errores
@@ -54,14 +54,18 @@ def get_top_n_recommendations(user_id, n=10):
     
     return top_n_titles
 
-# Ruta de la API para obtener recomendaciones
-@app.route('/recommend', methods=['GET'])
+# Ruta principal para mostrar el formulario
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+# Ruta para procesar el formulario e imprimir las recomendaciones
+@app.route('/recommend', methods=['POST'])
 def recommend():
     try:
-        user_id = int(request.args.get('user_id'))
-        n = int(request.args.get('n', 10))
-        recommendations = get_top_n_recommendations(user_id, n)
-        return jsonify(recommendations)
+        user_id = int(request.form['user_id'])  # Obtener el valor de user_id del formulario
+        recommendations = get_top_n_recommendations(user_id, 10)  # Top 10 recomendaciones
+        return render_template('index.html', recommendations=recommendations)
     except ValueError as e:
         return jsonify({"error": "Invalid input", "message": str(e)})
     except Exception as e:
@@ -69,4 +73,3 @@ def recommend():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
-
