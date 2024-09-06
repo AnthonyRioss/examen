@@ -53,7 +53,7 @@ Se Añadió el modelo a un bucket en AWS debido al tamaño del modelo, al ser ma
  
 El sistema fue desplegado en una instancia de **AWS EC2**. Para acceder a la API de recomendaciones, puedes hacer una solicitud GET a:
 
-http://18.118.132.165:5000/
+http://18.222.240.6:5000/
 
 ![alt text](image-1.png)
 
@@ -73,6 +73,7 @@ pip install -r requirements.txt
 ```
 ## Observaciones
 Por temas de tiempo estoy probando la funcionalidad de servicios como vertex IA 
+Al ser una cuenta gratis de aws el servidor suele caerse y es inestable
 
 ✅ Checklist de Entrega
 Por favor, marca con una "X" los ítems que has completado:
