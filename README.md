@@ -42,7 +42,7 @@ Para ejecutar el sistema localmente, sigue estos pasos:
 4. Accede a la API a través de `http://127.0.0.1:5000/`.
 
 ### Cuaderno de Google Colab
-El entrenamiento del modelo y el análisis exploratorio de datos (EDA) se realizaron en **Google Colab**.
+El entrenamiento del modelo y el análisis exploratorio de datos (EDA) se realizaron en **Google Colab** porque la librería surprise no me dejaba instalarla en mi pc y daba muchos problemas.
 El link es: https://colab.research.google.com/drive/1t2oA7uIjmHqGswyQbmnQbibUFoKcWMkz?usp=sharing
 Puedes abrir este cuaderno en Colab para ver el proceso detallado de exploración de datos, preprocesamiento y entrenamiento del modelo.
 
