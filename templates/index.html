@@ -109,7 +109,12 @@
     <script>
         function limpiarFormulario() {
             document.getElementById('user_id').value = ''; // Limpiar el campo de entrada
-            document.getElementById('recomendaciones').innerHTML = ''; // Limpiar las recomendaciones
+            var recomendacionesDiv = document.getElementById('recomendaciones'); 
+            
+            // Eliminar todas las recomendaciones del div
+            while (recomendacionesDiv.firstChild) {
+                recomendacionesDiv.removeChild(recomendacionesDiv.firstChild);
+            }
         }
     </script>
 </body>
