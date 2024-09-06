@@ -73,7 +73,9 @@ pip install -r requirements.txt
 ```
 ## Observaciones
 Por temas de tiempo estoy probando la funcionalidad de servicios como vertex IA 
-Al ser una cuenta gratis de aws el servidor suele caerse y es inestable
+
+
+Además al ser una cuenta gratis de aws, el servidor suele caerse y es inestable
 
 ✅ Checklist de Entrega
 Por favor, marca con una "X" los ítems que has completado:
