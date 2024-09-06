@@ -79,6 +79,9 @@ Por temas de tiempo estoy probando la funcionalidad de servicios como vertex IA
 
 Además al ser una cuenta gratis de aws, el servidor suele caerse y es inestable
 
+La funcionalidad de limpiar está en proceso:
+![alt text](image-4.png)
+
 ✅ Checklist de Entrega
 Por favor, marca con una "X" los ítems que has completado:
 1. Exploración y Preparación de Datos ✅  (colab)
