@@ -39,11 +39,13 @@ Para ejecutar el sistema localmente, sigue estos pasos:
 4. Accede a la API a través de `http://127.0.0.1:5000/recommend?user_id=<id>`.
 
 ### Cuaderno de Google Colab
-El entrenamiento del modelo y el análisis exploratorio de datos (EDA) se realizaron en **Google Colab**. El cuaderno se encuentra en este repositorio con el archivo `Modelo_de_recomendacion.ipynb`. Puedes abrir este cuaderno en Colab para ver el proceso detallado de exploración de datos, preprocesamiento y entrenamiento del modelo.
+El entrenamiento del modelo y el análisis exploratorio de datos (EDA) se realizaron en **Google Colab**.
+El link es: https://colab.research.google.com/drive/1t2oA7uIjmHqGswyQbmnQbibUFoKcWMkz?usp=sharing
+Puedes abrir este cuaderno en Colab para ver el proceso detallado de exploración de datos, preprocesamiento y entrenamiento del modelo.
 
 ### Despliegue en AWS
 
-Se Añadió el modelo a un bucket en AWS debido al tamaño del modelo, al ser mayor 200 github no acepta ese tamaño.
+Se Añadió el modelo a un bucket en AWS debido al tamaño del modelo, al ser mayor 200mb github no acepta ese tamaño.
 ![alt text](image.png)
 
 El sistema fue desplegado en una instancia de **AWS EC2**. Para acceder a la API de recomendaciones, puedes hacer una solicitud GET a:
