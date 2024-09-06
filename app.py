@@ -2,9 +2,11 @@ import pandas as pd
 from flask import Flask, request, jsonify
 import joblib
 
-# Cargar los datos de calificaciones y películas
-ratings_1m = pd.read_csv('data/ratings.dat', sep='::', header=None, names=['user_id', 'item_id', 'rating', 'timestamp'], engine='python')
-movies_1m = pd.read_csv('data/movies.dat', sep='::', header=None, names=['item_id', 'title', 'genres'], engine='python', encoding='ISO-8859-1')
+try:
+    ratings_1m = pd.read_csv('data/ratings.dat', sep='::', header=None, names=['user_id', 'item_id', 'rating', 'timestamp'], engine='python')
+    movies_1m = pd.read_csv('data/movies.dat', sep='::', header=None, names=['item_id', 'title', 'genres'], engine='python', encoding='ISO-8859-1')
+except FileNotFoundError as e:
+    print(f"Error: {e}")
 
 # Cargar el modelo guardado desde la carpeta /model
 algo = joblib.load('modelo/knn_movie_recommendation_model_1m.pkl')
