@@ -95,18 +95,21 @@
         <button type="button" class="btn-secondary" onclick="limpiarFormulario()">Limpiar</button>
     </form>
     
-    {% if recommendations %}
-        <h2>Recomendaciones:</h2>
-        <ul>
-            {% for movie in recommendations %}
-                <li>{{ movie }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <div id="recomendaciones">
+        {% if recommendations %}
+            <h2>Recomendaciones:</h2>
+            <ul>
+                {% for movie in recommendations %}
+                    <li>{{ movie }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
 
     <script>
         function limpiarFormulario() {
-            document.getElementById('user_id').value = '';
+            document.getElementById('user_id').value = ''; // Limpiar el campo de entrada
+            document.getElementById('recomendaciones').innerHTML = ''; // Limpiar las recomendaciones
         }
     </script>
 </body>
